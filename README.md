@@ -36,22 +36,27 @@ CryptoCombatGear is a decentralized application (DApp) built for managing and tr
    cd backend
 
 2. Install the dependencies:
+    ```bash
     npm install
 
 3. Set up the environment variables in the .env file.
 
 4. Start the backend server:
+    ```bash
     npm start
 
 ### Frontend Setup
 
 1. Navigate to the frontend directory:
+    ```bash
     cd frontend
 
 2. Install the dependencies:
+    ```bash
     npm install
 
 3. Start the frontend application:
+    ```bash
     npm start
 
 Usage
@@ -62,6 +67,7 @@ Connect your MetaMask wallet.
 Start buying, selling, and trading combat gear!
 
 Project Structure
+```bash
 cryptocombatgear/
 ├── backend/
 │   ├── config/
@@ -86,7 +92,7 @@ cryptocombatgear/
 ├── .gitignore
 ├── package.json
 └── package-lock.json
-
+```
 
 Environment Variables
 The backend requires several environment variables to be set in the .env file. Here is a template:
