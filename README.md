@@ -92,12 +92,12 @@ Once the servers are running, you can access the application via http://localhos
 ## Environment Variables
 Ensure you have the necessary environment variables set up. You can find a sample configuration in the .env file. Here are the key variables:
 
-`MONGODB_URI`: MongoDB connection string (if used)
-`PORT`: Port for the backend server
-`REACT_APP_API_URL`: URL for the backend API
-`INFURA_PROJECT_ID`: Infura project ID for Ethereum network connectivity
-`STRIPE_PUBLIC_KEY`: Stripe public key for payment processing
-`STRIPE_SECRET_KEY`: Stripe secret key for payment processing
+1. `MONGODB_URI`: MongoDB connection string (if used)
+2. `PORT`: Port for the backend server
+3. `REACT_APP_API_URL`: URL for the backend API
+4. `INFURA_PROJECT_ID`: Infura project ID for Ethereum network connectivity
+5. `STRIPE_PUBLIC_KEY`: Stripe public key for payment processing
+6. `STRIPE_SECRET_KEY`: Stripe secret key for payment processing
 
 ## setup-and-configuration
 
