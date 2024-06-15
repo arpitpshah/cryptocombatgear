@@ -1,0 +1,36 @@
+import express from 'express';
+import dotenv from 'dotenv';
+import colors from 'colors';
+import { notFound, errorHandler } from './middleware/errorMiddleware.js';
+import productRoutes from './routes/productRoutes.js'
+import blockchairRoutes from './routes/blockchainRoute.js';
+import orderRoutes from './routes/orderRoute.js';
+import cors from 'cors';
+
+dotenv.config()
+
+//connectDB()
+
+const app=express()
+
+app.use(express.json())
+
+app.use(cors({
+    origin: 'http://cryptocombatgear.us-east-1.elasticbeanstalk.com' // Replace with your frontend's origin
+  }));
+
+app.get('/',(req,res)=>{
+    res.send('API is running.....')
+})
+
+app.use('/api/products',productRoutes)
+app.use('/api/blockchain', blockchairRoutes);
+app.use('/api/orders', orderRoutes);
+
+app.use(notFound)
+
+app.use(errorHandler)
+
+const port = process.env.PORT || 3000
+
+app.listen(port, console.log(`Server running in ${process.env.NODE_ENV} mode on port ${port}`.yellow.bold))
